@@ -27,13 +27,11 @@ var mergeTwoLists = function(l1, l2) {
                 }
             }else{
                 l3.next = l1;
-                l1 = l1.next;
-                l3 = l3.next;
+                return result.next;
             }
         }else{
             l3.next = l2;
-            l2 = l2.next;
-            l3 = l3.next;
+            return result.next;
         }
     }
     return result.next;
