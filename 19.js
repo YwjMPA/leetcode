@@ -12,23 +12,18 @@
  */
 var removeNthFromEnd = function(head, n) {
     var current = head,
-        index = 0;
+        index = 0,
+        arr = [];
     while (current) {
+        arr.push(current);
         index++;
         current = current.next;
     }
-    if (index === n) {
+    if (arr[index - n - 1]) {
+        arr[index - n - 1].next = arr[index - n - 1].next.next;
+    }else {
         head = head.next;
     }
-    current = head,
-    indexTwo = 0;
-    while (current) {
-        indexTwo++;
-        if (indexTwo == index - n ) {
-            current.next = current.next.next;
-        }else{
-            current = current.next;
-        }
-    }
+
     return head;
 };
