@@ -1,3 +1,3 @@
-# [Leetcode] (https://leetcode.com/)
+# [Leetcode](https://leetcode.com/)
 
 My Leetcode Online Judge JavaScript Solution
